@@ -112,18 +112,24 @@ abbreviation (준말,약어)/ 이니셜 작성 후 원래 의미 나타낼 때 �
 
 *title속성은 global 속성으로 abbr 태그의 속성 뿐 만 아니라 p태그 등 여러 태그의 속성으로 사용 가능
 
+<br/>
+
 **\<address>**
 
 주소. 메일, SNS, 웹사이트 통칭
 
 ```<address> website address : <a href="https://sample.com">sample</a></address>```
-<address> website address : <a href="https://sample.com">sample</a></address><br />
+<address> website address : <a href="https://sample.com">sample</a></address>
 *기본적으로 약간 기울여서 나타내짐
+
+<br/>
 
 **\<cite>** 
 
 인용의 출처
   - blockquote의 속성 `cite`와 다른점 : 직접적으로 웹페이지에 명시함
+
+<br/>
 
 **\<bdo>**
 
@@ -199,6 +205,8 @@ bidirectional override
 <p> 이 부분은 <del>제거된 부분</del> 입니다.</p>
 - mark태그는 스크린 리더가 읽지 못함
 
+<br />
+
 **\<ins>**
 
 문서에서 추가된 텍스트의 범위를 나타냄
@@ -217,6 +225,8 @@ bidirectional override
 
 ```<p>The <code>push()</code> methods adds...</p>```
 <p>The <code>push()</code> methods adds...</p>
+
+<br />
 
 **\<kbd>**
 
