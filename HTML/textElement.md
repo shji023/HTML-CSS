@@ -55,25 +55,28 @@ HTML \<br> 요소는 텍스트 안에 줄바꿈을 생성.
 *p태그 내부에는blockquote 사용x - p태그는 자식 태극 block요소이면 자동으로 p태그가 닫힘
 
 **속성 Attribute**
+
 `cite` : 인용문의 출처 문서나 메시지를 가리키는 URL, 인용문의 맥락 혹은 출처 정보를 가리킬 용도.
 
-### pre - preformattd
-HTML \<pre>요소는 미리 서식을 지정한 텍스트를 나타냄. HTML에서 작성한 내용 그대로 표현. 텍스트는 보통 [고정폭글꼴](#고정폭글꼴)을 사용해 렌더링, 요소 네 공백문자를 그대로 유지<br />
-**고정폭글꼴**<br />
+### pre - preformatted
+HTML \<pre>요소는 미리 서식을 지정한 텍스트를 나타냄. HTML에서 작성한 내용 그대로 표현. 텍스트는 보통 [고정폭글꼴](#고정폭글꼴)을 사용해 렌더링, 요소 네 공백문자를 그대로 유지
+
+**고정폭글꼴**
+
 모든 글자가 고정된 폭을 가짐 
 ```
 <pre>
-IIIII
+  IIIII
 </pre>
 <p>
-IIIII
+  IIIII
 </p>
 ```
 <pre>
-IIIII
+  IIIII
 </pre>
 <p>
-IIIII
+  IIIII
 </p>
 
 ### figure, figcaption
@@ -99,31 +102,30 @@ HTML \<hr> 요소는 이야기 장면 전환, 구획 내 주제 변경 등, 문�
 - 빈 요소
 
 ### abbr, address, cite, bdo
-`abbr` : abbreviation (준말,약어)/ 이니셜 작성 후 원래 의미 나타낼 때 사용
+- `abbr` : abbreviation (준말,약어)/ 이니셜 작성 후 원래 의미 나타낼 때 사용
 
-```<abbr title="World Wide Web">WWW</abbr>```
+    ```<abbr title="World Wide Web">WWW</abbr>```
 
-<abbr title="World Wide Web">WWW</abbr>
+    <abbr title="World Wide Web">WWW</abbr>
 
-*title속성은 global 속성으로 abbr 태그의 속성 뿐 만 아니라 p태그 등 여러 태그의 속성으로 사용 가능
+    *title속성은 global 속성으로 abbr 태그의 속성 뿐 만 아니라 p태그 등 여러 태그의 속성으로 사용 가능
 
-`address` : 주소. 메일, SNS, 웹사이트 통칭
+- `address` : 주소. 메일, SNS, 웹사이트 통칭
 
-```<address> website address : <a href="https://sample.com">sample</a></address>```
-<address> website address : <a href="https://sample.com">sample</a></address><br />
-*기본적으로 약간 기울여서 나타내짐
+    ```<address> website address : <a href="https://sample.com">sample</a></address>```
+    <address> website address : <a href="https://sample.com">sample</a></address><br />
+    *기본적으로 약간 기울여서 나타내짐
 
-`cite` : 인용의 출처
-- blockquote의 속성 `cite`와 다른점
-  - 직접적으로 웹페이지에 명시함
+- `cite` : 인용의 출처
+  - blockquote의 속성 `cite`와 다른점 : 직접적으로 웹페이지에 명시함
 
-`bdo` :  bidirectional override
+- `bdo` :  bidirectional override
 
-```<p><bdo dir="rtl">이 글은 오른쪽에서 왼쪽으로 작성합니다.</bdo></p>```
+    ```<p><bdo dir="rtl">이 글은 오른쪽에서 왼쪽으로 작성합니다.</bdo></p>```
 
-<p><bdo dir="rtl">이 글은 오른쪽에서 왼쪽으로 작성합니다.</bdo></p>
-*rtl : right to left <br />
-*ltr : left to right
+    <p><bdo dir="rtl">이 글은 오른쪽에서 왼쪽으로 작성합니다.</bdo></p>
+    *rtl : right to left <br />
+    *ltr : left to right
 
 ## 포매팅
 단순히 나열되어있는 문단이나 문장 중에서 특정 의미를 띄고 있는 경우 포매팅을 활용하여 주의를 끌거나 강조
