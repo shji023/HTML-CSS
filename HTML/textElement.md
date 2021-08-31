@@ -203,9 +203,7 @@ bidirectional override
 
 ```<p> 이 부분은 <del>제거된 부분</del> 입니다.</p>```
 <p> 이 부분은 <del>제거된 부분</del> 입니다.</p>
-- mark태그는 스크린 리더가 읽지 못함
 
-<br />
 
 **\<ins>**
 
