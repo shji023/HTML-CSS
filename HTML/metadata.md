@@ -50,7 +50,7 @@ HTML \<meta> 요소는 \<base>, \<link>, \<script>, \<style>, \<title>과 같은
 클라이언트에게 전송된 문서의 다양성을 알려주기 위한 메커니즘
 예시
 ```
-<link href="style/main.css"> rel="stylesheet" type="text/css"
+<link href="style/main.css" rel="stylesheet" type="text/css"> 
 ```
 - `type="text/css"` : href="style/main.css" 문서의 경로만 가르킬 뿐 어떤 타입인지 명시해주지 않았기에 타입 속성을 활용하여 명시 
 
