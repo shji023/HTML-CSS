@@ -76,4 +76,7 @@
 ## canvas, iframe
 **\<canvas>** 마크업은 할 수 있되 그림을 그리는 등 추가기능은 javascript 사용하기<br />
 **\<iframe>** 현재 문서 안에 다른 HTML삽입
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3163.744682126815!2d126.9868574145682!3d37.53751542980339!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca249029c7327%3A0x3f34d9a9d34be398!2z7ISc7Jq47Yq567OE7IucIOyaqeyCsOq1rCDsnbTtg5zsm5Drj5kg64W57IKs7Y-J64yA66GcNDbquLg!5e0!3m2!1sko!2skr!4v1630582540120!5m2!1sko!2skr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+```
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3163.744682126815!2d126.9868574145682!3d37.53751542980339!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca249029c7327%3A0x3f34d9a9d34be398!2z7ISc7Jq47Yq567OE7IucIOyaqeyCsOq1rCDsnbTtg5zsm5Drj5kg64W57IKs7Y-J64yA66GcNDbquLg!5e0!3m2!1sko!2skr!4v1630582540120!5m2!1sko!2skr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+```
+![iframe](https://user-images.githubusercontent.com/60960130/131837851-19039a28-1a5d-4ef2-964e-67f42a653ff3.png)
