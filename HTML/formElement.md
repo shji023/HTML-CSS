@@ -9,15 +9,6 @@
   <button type=""submit>로그인</button>
 </form>
 ```
-<form action="http://server.com/login" method="post">
-  <label for="userEmail">이메일</label>
-  <input type="email" name="userEmail" id="userEmail">
-  <label>비밀번호
-    <input type="password" name="userPassword">
-  </label>
-  <button type=""submit>로그인</button>
-</form>
-
 `action` : 양식 데이터를 처리할 프로그램의 URI.<br />
 `method` : get, post
 ### \<input>
@@ -59,28 +50,6 @@
   <button type=""submit>설문조사완료</button>
 </form>
 ```
-<form action="http://server.com/survey" method="post">
-  <fieldset>
-    <legend>기본 정보</legend>
-    <label>이름
-      <input type="text" name="name">
-    </label>
-    <label>나이
-      <input type="text" name="age">
-    </label>
-  </fieldset>
-  <fieldset>
-    <legend>추가 정보</legend>
-    <label>특기
-      <input type="text" name="skill">
-    </label>
-    <label>취미
-      <input type="text" name="hobby">
-    </label>
-  </fieldset>
-  <button type=""submit>설문조사완료</button>
-</form>
-
 `disabled` 속성 지정할 경우 한 fieldset안의 모든 자손 컨트롤 가능
 
 ## input
@@ -108,28 +77,6 @@
   <input type="radio" name="radio" value="2">
 </label>
 ```
-<label>telType : 
-  <input type="tel" name="tel">
-</label>
-<label>numberType : 
-  <input type="number" name="num">
-</label>
-<label>rangeType : 
-  <input type="range" name="range">
-</label>
-<label>dateType : 
-  <input type="date" name="date">
-</label>
-<input type="reset" value="초기화">
-<label>체크박스
-  <input type="checkbox" name="check1" checked>
-  <input type="checkbox" name="check2">
-</label>
-<label>라디오버튼
-  <input type="radio" name="radio" value="1">
-  <input type="radio" name="radio" value="2">
-</label>
-
 ### name, placeholder, autocomplete, required, disabled, readonly
 `name`: 서버에 전송되는 이름 <br />
 `placeholder` : 힌트값 미리 표시<br />
@@ -149,9 +96,6 @@
 <button type="reset"></button>
 <button type="reset"></button>
 ```
-<button type="reset"></button>
-<button type="reset"></button>
-<button type="reset"></button>
 - 자식에 text값 지정하지 않으면 글자없이 버튼만 나타남
 - text 값 아니어도 다른 요소 삽입 가능 (input과의 차이점)
 - 다만, 텍스트를 함께 넣어 접근성을 높이는 것이 좋음
@@ -164,13 +108,6 @@
   <option>orange</option>
 </select>
 ```
-<select id="fruit" name="fruit">
-  <option value="">choose fruit</option>
-  <option value="melon">melon</option>
-  <option value="apple">apple</option>
-  <option value="orange">orange</option>
-</select>
-
 - 기본값 첫번째 option
 
 `value` : 서버로 보내기 위해<br />
@@ -191,15 +128,6 @@
   <option>orange</option>
 </datalist> 
 ```
-<label>과일
-  <input type="text" name="fruit" list="fruitlist"> 
-</label>
-<datalist id="fruitlist">
-  <option>melon</option>
-  <option>apple</option>
-  <option>orange</option>
-</datalist> 
-
 ## textarea
 \<input>은 한줄의 텍스트만 입력을 받지만 \<textarea>는 여러줄 가능
 ```
@@ -207,7 +135,4 @@
   <textarea type="text" name="comment" rows="6" cols="30"> </textarea>
 </label>
 ```
-<label> 소감
-  <textarea type="text" name="comment" rows="6" cols="30"> </textarea>
-</label>
 *나중에 css로 resize none 해야 textarea크기 고정됨
