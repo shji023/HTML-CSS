@@ -1,0 +1,40 @@
+.container {
+  width: 100px; /*초기값 auto, 상속x*/
+  height: 100px; /*inline 요소는 width와 height를 작성한다해서 적용안됨*/
+  min-width: 50px; /*50px이하부턴 줄어들지 않음*/
+  padding: 18px; /*border 기준 안쪽 여백, 상우하좌, (상하)(좌우), 상(좌우)하, 음수 값 사용 불가, %를 사용할 경우 부모의 width의 % 따라감*/
+  border: 5px solid rebeccapurple; /*shorthand, style은 none이기에 라인을 나타내고 싶다면 꼭 작성*/
+  /*
+  border-style, border-width, border-color
+  */
+  border-radius: 10px; /*둥글게, 가로세로의 절반으로 하면 원이됨, %가로세로 각각 적용, 왼위 왼오 아래오 아래왼*/
+  margin: 30px; /*상속x, shorthand, 상우하좌, (상하)(좌우), 상(좌우)하, %를 사용할 경우 부모의 width의 % 따라감*/
+}
+
+/*margin collapsing
+여러 block 요소들이 top bottom 겹칠 경우 큰 margin으로 상쇄됨
+부모-자식요소간에도 margin-collapsing : 둘 사이의 collapsing을 끊어내기 위해서는 border나 padding값을 주어야함
+블록안에 border, padding, content가 존재하지 않는다면, margin-top과 margin-bottom 이 상쇄가됨
+*/
+
+.minmax {
+  width: 50%;
+  height: 50%;
+  min-width: 200px; /*viewport의 비율에 따라 줄어들다가 200px이하부턴 줄어들지 않음*/
+  max-height: 200px; /*viewport의 비율에 따라 줄어들다가 200px이상부턴 증가하지 않음*/
+}
+
+/*boxsizing - 요소의 너비와 높이를 계산하는 방법 지정*/
+.box-sizing {
+  width: 300px;
+  height: 200px;
+  padding: 20px;
+  border: 30px solid black;
+  background-color: sandybrown;
+  box-sizing: content-box; /*지정한 width height만 + a*/
+  box-sizing: border-box; /*지정한 width height대로 -> 총 가로길이 300px height 200px*/
+} /*총 사이즈 350 x 250*/
+
+* {
+  box-sizing: border-box; /*보통 이런식으로 작성*/
+}
