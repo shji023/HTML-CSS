@@ -1,0 +1,36 @@
+.basic {
+  color: aqua; /*fontcolor*/
+  font-size: 16px; /*30% 2em ...*/
+  font-style: italic; /*=oblique, 기본값은 normal*/
+  font-weight: bold; /*700, normal - 400*/
+  font-family: "Times New Roman", Times, serif; /*맨 앞에거 없으면 그다음꺼, 없으면 그다음꺼*/
+  line-height: 1.5; /*폰트 사이즈 동일 함에도 줄간격은 다를 수 있기에 설정을 통해 변경가능*/
+}
+
+.shorthand {
+  color: aqua;
+  font: oblique bold 16px/1.5 "Times New Roman", Times, serif; /*속성 한꺼번에 사이즈,family(필수)*/
+} /*위 basic과 동일*/
+
+.more {
+  letter-spacing: 5px; /*글자 간격, word-spacing : 단어간격*/
+  text-align: center; /*텍스트 정렬 block에 적용됨.inline을 정렬하고 있으면 div로 감싸고 속성 작성*/
+  text-indent: 30%; /*들여쓰기, 상속됨 inherited. inline요소에는 적용이 안됨*/
+  text-decoration: underline; /*shorthand 보통 line*/
+  /*text-decoration: aqua line-through wavy 3px;*/
+  text-decoration-style: wavy; /*물결 밑줄*/
+}
+
+.word-break p {
+  width: 50px;
+  background-color: bisque;
+}
+
+.word-break p[lang="en"] {
+  word-break: break-all; /*단어 크기에 맞는 만큼만 자돋으로 줄바꿈되게함*/
+}
+
+.word-break p[lang="ko"] {
+  word-break: keep-all; /*background 크기 벗어나게 함 spacing이 없다면 줄바꿈을 하지 않게됨*/
+  text-transform: capitalize; /*앞글자만 대문자로 변경 uppercase(대문자), lowercase(소문자)*/
+}
