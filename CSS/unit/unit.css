@@ -1,0 +1,35 @@
+/*절대 길이 px, pt
+절대길이는 사용자 설정을 따르지 않기에 접근성 문제 유발. fontsize 설정할 땐 em, rem 사용 권장
+
+상대길이 
+1. 글꼴 em, rem
+  1em : 부모의 font-size
+  1rem : root의 font-size (브라우저 설정 사이즈)
+2. 뷰 포트 vw, vh, vmin, vmax
+*/
+.viewport {
+  background-color: cornflowerblue;
+  width: 100vw;
+  height: 50vh;
+} /*vmin, vmax - 반응형에서 가로모드나 세로모드를 대응해야할 때 사용. 둘중 작은값이 min, 큰값이max*/
+
+.parent {
+  width: 100px;
+  height: 100px;
+  background-color: darkgoldenrod;
+} /* parent에도 %를 사용하면 전체 뷰포트 크기의 %만 차지*/
+.child {
+  width: 50%;
+  height: 80%;
+  background-color: darkgreen;
+}
+
+/*함수 표기법*/
+.calc {
+  background-color: darkseagreen;
+  width: calc(
+    100% - 50px
+  ); /*상대와 절대단위 섞어 사용 가능, 연산자 좌우에 공백 사용하기*/
+  height: min(100%, 300px); /*두개 값중 작은 값 선택*/
+  height: max(100%, 300px); /*두개 값중 큰 값 선택*/
+}
