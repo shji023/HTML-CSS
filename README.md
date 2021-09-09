@@ -9,4 +9,4 @@
 210906 :  [CSS 개요](/CSS/outline.md), [선택자](/CSS/selector.md) <br />
 210907 :  [폰트 관련 속성](/CSS/font/font.css), [단위와 값](/CSS/unit/unit.css), [박스 모델](CSS/boxmodel/boxmodel.css)<br />
 210908 : [레이아웃](/CSS/layout/layout.css) <br />
-210909 : [색상과 배경](/CSS/color/color.css), [transform](/CSS/transform/transform.css) <br />
+210909 : [색상과 배경](/CSS/color/color.css), [transform](/CSS/transform/transform.css), [transition](/CSS/transition/transition.css) <br />
