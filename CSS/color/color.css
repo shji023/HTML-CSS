@@ -1,0 +1,31 @@
+.rgb {
+  width: 100px;
+  height: 100px;
+  background-color: rgba(
+    0,
+    255,
+    0,
+    0.5
+  ); /*마지막 변수는 투명도, 0=투명 1=불투명*/
+}
+
+.background {
+  width: 100px;
+  height: 100px;
+  background-color: crimson;
+  opacity: 0.6; /*배경 색 뿐만아니라 div전체가 불투명도 적용됨*/
+  background-image: url("https://sample.png"); /*background-color 보다 z-index높음*/
+  background-repeat: no-repeat; /*repeat-x : 가로축으로 반복, repact-y : 세로축으로 반복, repeat : x,y로 반복*/
+  background-position: 50px 100px; /*왼쪽상단 기준, top center left bottom 은 순서와 상관없이 적용가능*/
+  border: 30px dashed blue;
+  padding: 30px;
+  background-origin: content-box; /*content 영역부터 시작, padding-box : padding 영역 부터 시작, borderbox : 영역부터 시작*/
+  background-size: cover; /*이미지가 찌그러지지 않는 한도 내에서 제일 크게 설정, 뒤에 background-color 보이지 않음,
+  contain : container안에 이미지가 쏙들어가게 함, 빈 공간이 생김. 100px 100px : 이미지 원래 비율 깨지고 새로 입력한 크기대로. 
+  100px : 이미지 비율은 그대로, 가로 비율에 맞춰서 */
+}
+
+.backshort {
+  background: url("test.jpg") repeat-x;
+  background: border-box red;
+}
