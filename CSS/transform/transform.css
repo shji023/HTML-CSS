@@ -1,0 +1,15 @@
+.greetea {
+  width: 400px;
+  transform: scale(
+    0.5
+  ); /*가로세로 절반으로 작아짐, div 공간은 그대로 가지고 있음, scaleX, scaleY*/
+  transform: rotate(
+    45deg
+  ); /*45도 회전(시계 방향) -이면 반시계방향으로 회전 180deg = 0.5turn*/
+  transform: translate(
+    100px,
+    100px
+  ); /*(x축, y축) (x축) translateX, translateY*/
+  transform: skew(); /*(x축, y축) (x축) skewX skewY*/
+  transform-origin: top left; /*원점의 위치 설정 가능*/
+}
