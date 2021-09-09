@@ -1,0 +1,23 @@
+/*transition : A -> B 로 시간의 흐름을 가지고 변환됨.*/
+
+.transition {
+  width: 200px;
+  height: 150px;
+  border: 3px solid darkkhaki;
+  background-color: darkkhaki;
+  font-size: 20px;
+  transition-property: all; /*밑의 hover시 변경되는 속성 모두 적용*/
+  transition-duration: 0.5s;
+  transition-delay: 1s; /*1초의 시간 뒤에 transition 이 적용됨*/
+  transition-timing-function: linear; /*바뀌는 과정의 속도가 일정하게 바뀜, ease-in, ea*/
+
+  /*shorthand*/
+  transition: all 0.5s linear 1s;
+}
+
+.transition:hover {
+  width: 220px;
+  background-color: darkolivegreen;
+  color: white;
+  font-size: 40px;
+}
