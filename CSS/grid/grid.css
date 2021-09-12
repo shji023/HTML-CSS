@@ -1,0 +1,122 @@
+/*grid layout 기본 개념 : 2차원*/
+
+.container {
+  border: 5px dashed darksalmon;
+  width: 400px;
+  height: 400px;
+  display: grid;
+  grid-template-columns: 100px 150px 100px;
+  grid-template-columns: 1fr 1fr 1fr; /*1:1:1 비율*/
+  grid-template-columns: repeat(4, 1fr); /*반복*/
+  grid-template-rows: 100px 100px;
+}
+.item {
+  background-color: darkseagreen;
+  border: 3px solid tomato;
+  font-size: 30px;
+}
+
+.grid {
+  border: 5px dashed darksalmon;
+  width: 400px;
+  height: 400px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-areas:
+    "hd hd hd hd hd"
+    "ma ma ma sb sb"
+    "ft ft ft ft ft";
+}
+.item {
+  background-color: darkseagreen;
+  border: 3px solid tomato;
+  font-size: 30px;
+}
+.header {
+  grid-area: hd;
+}
+.main {
+  grid-area: ma;
+}
+.sidebar {
+  grid-area: sb;
+}
+.footer {
+  grid-area: ft;
+}
+
+.container {
+  border: 5px dashed darksalmon;
+  width: 400px;
+  height: 400px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  row-gap: 20px;
+  column-gap: 50px;
+  gap: 20px 50px; /*단축 속성*/
+
+  /*템플릿을 넘쳐나는 아이템을 설정해주고 싶을 때*/
+  grid-auto-rows: 100px; /*넘친 아이템의 행 크기를 명시해줌*/
+  grid-auto-columns: 100px; /*넘친 아이템의 열 크기를 명시해줌*/
+
+  /*아이템이 어떤 방향으로 흐를지 결정*/
+  grid-auto-flow: column; /*열 축의 방향으로 흐름*/
+  grid-auto-flow: row dense; /*dense 추가 시 2번 아이템이 들어갈 자리가 없어 밑으로 내려갔지만 
+  그 자리를 다른 아이템이 빽빽히 채움*/
+
+  /*grid shorthand
+  아이템이 어디로 자리할 지 명시적으로 작성 : grid-template
+  흐름,눈에 안보이는 아이템 등 암시적인 속성 : gird-auto 
+  grid : row/column
+  grid : 명시/명시
+  grid : 명시/암시
+  grid : 암시/명시
+  */
+  grid: lfr 2fr / auto-flow 100px 200px; /*row명시적, column명시적 작성 후 열 축 방향으로 흐르게함*/
+}
+.item {
+  background-color: darkseagreen;
+  border: 3px solid tomato;
+  font-size: 30px;
+}
+.item:nth-child(2) {
+  grid-column: span 3;
+}
+
+/*아이템 이외에 container안에 빈 영역이 존재하는 상태*/
+.justify {
+  border: 5px dashed darksalmon;
+  width: 100%;
+  height: 500px;
+  display: grid;
+  grid-template-columns: repeat(
+    3,
+    100px
+  ); /*grid-template-columns: repeat(3, 1fr); - items 예제*/
+  grid-template-rows: repeat(3, 100px); /*grid-template-rows: repeat(3, 1fr);*/
+
+  /*메인축*/
+  justify-content: start; /*end, center, space-around, space-between*/
+  /*교차축*/
+  align-content: start; /*end, center, space-around, space-between*/
+  /*한 틀 안에서 각각의 아이템 위치*/
+  justify-items: stretch; /*해당 공간 안에서 꽉참 주축 중심*/
+  align-items: stretch; /*해당 공간 안에서 꽉참 교차축 중심*/
+}
+.content {
+  background-color: darkseagreen;
+  border: 3px solid tomato;
+  font-size: 30px;
+  /*width: 100%;
+  height: 100%;
+  */
+}
+.content:nth-child(1) {
+  width: 30px;
+  height: 30px;
+}
+.content:nth-child(3) {
+  justify-self: end; /*해당 공간안에서 메인축 끝나는 부분에 붙음 */
+}
