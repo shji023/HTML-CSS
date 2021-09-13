@@ -13,4 +13,4 @@
 210910 : [animation](/CSS/animation/animation.css)<br />
 210911 : [flex](/CSS/flex/flex.css)<br />
 210912 : [grid](/CSS/grid/grid.css)<br />
-210913 : [grid](/CSS/grid/grid.css),[HTML/CSS 연습](/CSS/practiceCSS.css)<br />
+210913 : [grid](/CSS/grid/grid.css), [HTML/CSS 연습](/CSS/practiceCSS.css)<br />
