@@ -28,7 +28,7 @@
     "ma ma ma sb sb"
     "ft ft ft ft ft";
 }
-.item {
+.area {
   background-color: darkseagreen;
   border: 3px solid tomato;
   font-size: 30px;
@@ -46,7 +46,7 @@
   grid-area: ft;
 }
 
-.container {
+.row {
   border: 5px dashed darksalmon;
   width: 400px;
   height: 400px;
@@ -76,12 +76,12 @@
   */
   grid: lfr 2fr / auto-flow 100px 200px; /*row명시적, column명시적 작성 후 열 축 방향으로 흐르게함*/
 }
-.item {
+.gap {
   background-color: darkseagreen;
   border: 3px solid tomato;
   font-size: 30px;
 }
-.item:nth-child(2) {
+.gap:nth-child(2) {
   grid-column: span 3;
 }
 
@@ -119,4 +119,46 @@
 }
 .content:nth-child(3) {
   justify-self: end; /*해당 공간안에서 메인축 끝나는 부분에 붙음 */
+}
+
+.grid-row {
+  border: 5px dashed chartreuse;
+  display: grid;
+  grid-template-rows: repeat(3, 100px);
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: min-content 1fr 1fr; /*min-content 가장 단어가 그 박스의 너비.
+   그 가장 긴단어 때문에 더이상 줄어들 수 없을 때까지 줄어듬*/
+  grid-template-columns: max-content 1fr 1fr; /*max-content 단어가 아니라 문장의 길이만큼도 늘일 수 있음*/
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(100px, 1fr)
+  ); /*auto-fill : column 의 개수를 유연하게 할 수 있음, minmax(min, max)*/
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(100px, 1fr)
+  ); /*auto-fill은 남는공간이 생김 하지만 auto-fit은 남는공간없이 꽉 채움*/
+}
+.box {
+  background-color: palevioletred;
+  border: 3px solid red;
+  font-size: 21;
+}
+.box:first-child {
+  background-color: powderblue;
+
+  grid-row-start: 1; /*몇번째 선인지를 의미 가장 바깥테두리가 1번선*/
+  grid-row-end: 4; /*4번째 선까지 설정할 경우 3칸이 채워짐, -1로 작성했을 때와 동일*/
+  /*shorthand
+  grid-row: 1/-1
+  grid-row: 1/ span 2 -> 1부터 2칸
+  grid-column 도 동일
+  */
+  grid-row: 4 / span 2;
+  grid-column: 2 / -1;
+  grid-area: 4 / 2 / span 2 /-1; /*위에 두개 작성한것과 동일. 
+  이렇게 사용하는것은 gird-template-areas에서 사용한 grid-area와 다름*/
+  z-index: 2; /*가장앞에 나와있음*/
+}
+.box:nth-child(3) {
+  order: -1; /*3번째 박스 맨앞으로*/
 }
