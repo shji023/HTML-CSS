@@ -11,7 +11,9 @@
   border-bottom: 1px solid rgb(231, 231, 231);
   padding-left: 16px;
   padding-right: 16px;
+  /*padding: 0 16px로 간단하게*/
   display: flex;
+  /*display: inline-block으로 했어도될듯*/
   align-items: center;
 }
 .navigation span {
@@ -20,12 +22,16 @@
 .navigation span:first-child {
   font-size: 24px;
   font-weight: bold;
+  /*float:right도 가능*/
   flex: 1;
 }
 
 .grid {
   width: 400px;
+  /*display: flex;
+  flex-wrap: wrap;*/
   display: grid;
+  /*grid-template-columns: repeat(3, 1fr)*/
   grid-template-columns: 1fr 1fr 1fr;
   gap: 20px 0;
   padding: 10px;
@@ -73,6 +79,30 @@ li {
     flex-wrap: wrap;
   }
 }
+/*
+main과 aside로 나눴을 시
+aside의 300px을 뺀 부분을 main으로
+main {
+  width: calc(100% - 300px);
+  float: left; //왼쪽 부유
+}
+aside{
+  width: 300px;
+  float: right;
+}
+반응형 데스크탑 퍼스트 일 경우
+@media only screen and (max-width: 720px) {
+  main {
+    width: 100vw;
+    float: none;
+  }
+
+  aside {
+    width: 100vw;
+    float: none;  // 왼쪽 오른쪽에 떠있지않고 아래로
+  }
+}
+  */
 
 .comment-list {
   line-height: 1.5;
