@@ -61,3 +61,13 @@ float한 박스들의 바로 아래 박스에게 주변을 흐르지 않고 원�
 clip-path: circle(40%);
 clip-pthr: url("sample.svg");
 ```
+
+## will-change
+요소에 예상되는 변화의 종류에 관한 힌트를 브라우저에 제공
+```
+will-change: scroll-position;
+will-change: content;
+```
+scroll-position : 스크롤 위치의 변경에 대한 기대
+content : 요소의 내용 대한 변경 기대
+- 브라우저가 미리 변이를 준비하게 해 원할하고 역동적인 애니메이션이 가능하게 함
